@@ -5,3 +5,4 @@ aiofiles
 starlette
 python-multipart
 traceback2
+opencv

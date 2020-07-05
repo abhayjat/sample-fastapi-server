@@ -24,17 +24,18 @@ async def root():
 
 @app.post("/cartoonify")
 async def cartoonify(image: UploadFile = File(...)):
+    output_image = process(image)
     return {"filename": image.filename}
 
 
 
-def process():
+def process(image):
     import cv2
 
     num_down = 2  # number of downsampling steps
     num_bilateral = 7  # number of bilateral filtering steps
 
-    img_rgb = cv2.imread("img_example.jpg")
+    img_rgb = cv2.imread("./public/cat.jpeg")
 
     # downsample image using Gaussian pyramid
     img_color = img_rgb
