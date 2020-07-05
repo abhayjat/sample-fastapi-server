@@ -1,5 +1,4 @@
 from fastapi import FastAPI, UploadFile, File
-import numpy
 from starlette.responses import FileResponse
 from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware

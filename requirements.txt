@@ -4,3 +4,4 @@ gunicorn
 aiofiles
 starlette
 python-multipart
+traceback
